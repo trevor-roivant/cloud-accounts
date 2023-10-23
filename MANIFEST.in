@@ -1,1 +1,2 @@
-recursive-include netbox_cloud_accounts/templates *.html
+recursive-include netbox_cloud_accounts/templates/netbox_cloud_accounts *.html
+recursive-include netbox_cloud_accounts/templates/inc *.html 
