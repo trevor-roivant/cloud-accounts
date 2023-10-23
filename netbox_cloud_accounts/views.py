@@ -5,6 +5,7 @@ from dcim.models import SiteGroup
 
 class CloudAccountView(generic.ObjectView):
     queryset = models.CloudAccount.objects.all()
+    template_name = 'netbox_cloud_accounts/cloudaccount.html'
 
 class CloudAccountListView(generic.ObjectListView):
     queryset = models.CloudAccount.objects.all()
@@ -21,6 +22,7 @@ class CloudAccountDeleteView(generic.ObjectDeleteView):
 #Providers
 class CloudProviderView(generic.ObjectView):
     queryset = models.CloudProvider.objects.all()
+    template_name = 'netbox_cloud_accounts/cloudprovider.html'
 
 class CloudProviderListView(generic.ObjectListView):
     queryset = models.CloudProvider.objects.all()
