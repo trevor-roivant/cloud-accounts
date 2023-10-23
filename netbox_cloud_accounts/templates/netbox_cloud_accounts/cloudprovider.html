@@ -1,0 +1,44 @@
+{% extends 'generic/object.html' %}
+
+{% block content %}
+  <div class="row mb-3">
+    <div class="col col-md-6">
+      <div class="card">
+        <h5 class="card-header">Cloud Provider</h5>
+        <div class="card-body">
+          <table class="table table-hover attr-table">
+            <tr>
+              <th scope="row">Name</th>
+              <td>{{ object.name }}</td>
+            </tr>
+    
+          </table>
+        </div>
+      </div>
+    </div>
+      <div class="col col-md-6">
+      <div class="card">
+        <h5 class="card-header">Contacts</h5>
+        <div class="card-body">
+          <table class="table table-hover attr-table">
+          <tr>
+            <th scope="row">Contact Group</th>
+            <td>
+              {% if object.contactgroup %}
+                <a href="{{ object.contactgroup.get_absolute_url }}">{{ object.contactgroup }}</a>
+              {% else %}
+                {{ ''|placeholder }}
+              {% endif %}
+            </td>
+        </tr>
+          </table>
+        </div>
+      
+      </div>
+      {% include 'inc/panels/custom_fields.html' %}
+    </div>
+    <div class="col col-md-6">
+      {% include 'inc/panels/comments.html' %}
+    </div>
+  </div>
+{% endblock content %}
