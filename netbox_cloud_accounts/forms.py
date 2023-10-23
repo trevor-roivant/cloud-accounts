@@ -11,7 +11,7 @@ from utilities.forms.fields import (
 class CloudAccountForm(NetBoxModelForm):
     accountId = forms.CharField(
         required=True,
-        label='Account ID'
+        label='ID'
     )
     contactgroup = DynamicModelChoiceField(
         queryset=ContactGroup.objects.all(),
