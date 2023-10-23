@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='netbox-cloud-accounts',
-    version='0.2',
+    version='0.3',
     description='Keep inventory of cloud accountsn',
     install_requires=[],
     packages=find_packages(),
